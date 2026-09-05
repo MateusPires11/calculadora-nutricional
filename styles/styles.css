@@ -35,7 +35,7 @@ select {
 }
 
 input[type="number"] {
-    -moz-appearance: textfield;
+    
     width: 200px;
     font-weight: 400;
     font-size: 20px;
