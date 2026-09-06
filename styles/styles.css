@@ -13,12 +13,10 @@ body {
 .Calculadora {
     font-size: 20px;
     font-weight: 400;
-    width: 600px;
-    margin: 0 auto;
     background-color: #ffffff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     padding: 20px;
-    border-radius: 20px;
+     border-radius: 20px 20px 0px 0px; 
 }
 
 .item {
@@ -35,7 +33,7 @@ select {
 }
 
 input[type="number"] {
-    
+
     width: 200px;
     font-weight: 400;
     font-size: 20px;
@@ -76,4 +74,18 @@ button:hover {
     background-color: #2e7d32;
     transform: scale(1.03);
     transition: 0.2s;
+}
+
+.centralizar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.resultadoss{
+    font-size: 20px;
+    font-weight: 400;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px; 
 }
