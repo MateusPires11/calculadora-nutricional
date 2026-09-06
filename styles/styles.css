@@ -1,45 +1,45 @@
+/* Layout geral */
 body {
-    background-color: #f4faf4;
-    color: #1b1b1b;
-    min-height: 100vh;
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4faf4;
+    color: #1b1b1b;
     font-family: "Roboto", sans-serif;
 }
 
+.centralizar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.Calculadora {
-    font-size: 20px;
-    font-weight: 400;
+/* Cards (form e resultado) */
+.Calculadora,
+.resultadoss {
     background-color: #ffffff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    padding: 20px;
     border-radius: 20px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .item {
     margin-top: 20px;
 }
 
-select {
-    width: 200px;
-    font-weight: 400;
-    font-size: 20px;
-    border-radius: 15px;
-    padding: 5px;
-    border: 2px solid #000;
-}
-
+/* Campos do formulário */
+select,
 input[type="number"] {
-
     width: 200px;
-    font-weight: 400;
-    font-size: 20px;
-    border-radius: 15px;
     padding: 5px;
     border: 2px solid #000;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 input::-webkit-outer-spin-button,
@@ -48,45 +48,26 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-
 option {
-
-    font-weight: 400;
-    font-size: 20px;
-
     padding: 5px;
-
+    font-size: 20px;
+    font-weight: 400;
 }
 
+/* Botão */
 button {
-    font-size: 30px;
-    font-weight: bolder;
-    background-color: #43a047;
-    color: #fff;
+    padding: 5px;
     border: 1px solid #000;
     border-radius: 15px;
-    padding: 5px;
+    background-color: #43a047;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bolder;
     cursor: pointer;
-
+    transition: 0.2s;
 }
 
 button:hover {
     background-color: #2e7d32;
     transform: scale(1.03);
-    transition: 0.2s;
-}
-
-.centralizar {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.resultadoss {
-    font-size: 20px;
-    font-weight: 400;
-    background-color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    padding: 20px;
-    border-radius: 20px;
 }
