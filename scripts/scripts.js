@@ -74,15 +74,34 @@ function macros(caloriasFinais) {
 }
 
 
+function styles() {
+    const form = document.getElementById('formCalculadora')
+    const resultado = document.getElementById('resultado')
+
+    form.style.borderRadius = '20px 20px 0px 0px';
+    resultado.style.borderRadius = '0px 0px 20px 20px';
+
+    form.style.boxShadow = '0 -2px 8px rgba(0, 0, 0, 0.08)';
+    resultado.style.boxShadow = '0 8px 8px -4px rgba(0, 0, 0, 0.08)';
+
+}
+
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    botao.addEventListener('click', (e) => {
-        e.preventDefault()
+    botao.addEventListener('click', (evento) => {
+        evento.preventDefault()
 
-        const TDEE = tdee()
+        const form = document.getElementById('formCalculadora')
+
+        if (!form.reportValidity()) {
+            return
+        }
+
         const TBM = tbm()
+        const TDEE = tdee(TBM)
         const caloriasFinais = calorasFinal(TDEE)
         const resultadoMacros = macros(caloriasFinais)
 
@@ -92,8 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('carboResultado').textContent = resultadoMacros.carbo.toFixed(0)
         document.getElementById('gordResultado').textContent = resultadoMacros.gordura.toFixed(0)
 
-
         document.getElementById('resultado').style.display = 'block'
+        styles()
     })
 
 
